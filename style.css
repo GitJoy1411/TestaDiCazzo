@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="number"] {
+    width: 50px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#risultato {
+    font-weight: bold;
+    margin-top: 20px;
+}
