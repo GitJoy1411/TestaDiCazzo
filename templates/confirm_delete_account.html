@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Confirm Delete Account{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Confirm Delete Account</h2>
+    <p>Are you sure you want to delete your account?</p>
+    <form action="{{ url_for('confirm_delete_account_post') }}" method="post">
+        <button type="submit">Yes, Delete My Account</button>
+    </form>
+</div>
+{% endblock %}

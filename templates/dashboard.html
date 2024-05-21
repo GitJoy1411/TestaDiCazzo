@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Dashboard</h2>
+    <h3>Lista</h3>
+    <ul>
+        {% for item in items %}
+            <li>{{ item[0] }}</li>
+            {% if editable %}
+                <a href="{{ url_for('remove_item', item_id=item[0]) }}" class="remove-btn">rimuovi</a>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% if editable %}
+        <form action="{{ url_for('update_list') }}" method="post">
+            <label for="new_item">Nuovo Nome:</label><br>
+            <input type="text" id="new_item" name="new_item" required><br><br>
+            <button type="submit">Add</button>
+        </form>
+    {% endif %}
+</div>
+{% endblock %}
